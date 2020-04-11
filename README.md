@@ -7,7 +7,7 @@ Sources of the Japanese book "Rubyで作る奇妙なプログラミング言語"
 * http://www.amazon.com/dp/4839927847
 
 The book covers topics like Turing Machine, Turing-completeness,
-Virtual Machine, 
+Virtual Machine,
 while implementing HQ9+, Brainf*ck, Whitespace and some more languages
 designed for this book.
 
@@ -33,3 +33,20 @@ _practices/以下はサポートサイトの「[演習問題の解答例](http:/
 --------
 
 本書が書かれたのはRuby 1.8/1.9の時代ですが、Ruby 2.xでも動作確認済みです。
+
+# 正誤表
+
+p. 19, リスト5: counter.rb
+
+```ruby
+def initialize
+  @value = 0
+end
+```
+
+となっているが、正しくは
+```ruby
+def initialize(n)
+  @value = n
+end
+```
