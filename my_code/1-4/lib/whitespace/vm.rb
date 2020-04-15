@@ -125,7 +125,7 @@ module Whitespace
     end
 
     def jump_to(name)
-      pc = @labels[arg]
+      pc = @labels[name]
       if pc.nil?
         raise ProgramError, "ジャンプ先(#{name.inspect})が見つかりません"
       end
