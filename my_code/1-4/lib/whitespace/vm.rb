@@ -79,6 +79,8 @@ module Whitespace
         when :call
           return_to.push(pc)
           pc = jump_to(arg)
+        when :return
+          pc = return_to.pop
           raise ProgramError, "サブルーチンの外から return しようとしました" if pc.nil?
         when :exit
           return
